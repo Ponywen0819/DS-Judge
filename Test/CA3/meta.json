@@ -1,0 +1,114 @@
+{
+  "judge_files": [
+    "DList.h",
+    "DList.cpp",
+    "DListNode.h",
+    "DListNode.cpp",
+    "LockDList.h",
+    "LockDList.cpp",
+    "LockDListNode.h",
+    "LockDListNode.cpp"
+  ],
+  "test_groups": [
+    {
+      "main_file": "./test_01.cpp",
+      "total": 30,
+      "sets": [
+        {
+          "input": "",
+          "output": "\n  ListNode     Item   \n----------------------\n1        999\n2        3\n3        1\n4        2\n5        222\n\n#\n\n  ListNode     Item   \n----------------------\n1        999\n2        3\n3        12345\n4        1\n5        2\n6        222\n7        123456\n\n#\n\n  ListNode     Item   \n----------------------\n1        4\n2        999\n3        3\n4        12345\n5        1\n6        2\n7        222\n8        44\n9        123456\n\n#\n\n  ListNode     Item   \n----------------------\n1        12345\n2        1\n"
+        }
+      ]
+    },
+    {
+      "main_file": "./test_02.cpp",
+      "total": 30,
+      "sets": [
+        {
+          "input": "",
+          "output": "\n  ListNode     Item   \n----------------------\n1        1\n2        2\n3        3\n4        4\n5        5\n\n#\n\n  ListNode     Item   \n----------------------\n1        1\n2        5\n"
+        }
+      ]
+    },
+    {
+      "main_file": "./test_03.cpp",
+      "total": 30,
+      "sets": [
+        {
+          "input": "",
+          "output": "\n  ListNode     Item   \n----------------------\n1        999\n2        3\n3        1\n4        999\n5        3\n6        1\n7        999\n8        3\n9        1\n10        2\n11        222\n12        2\n13        222\n14        2\n15        222\n\n#\n\n  ListNode     Item   \n----------------------\n1        999\n2        3\n3        12345\n4        1\n5        999\n6        3\n7        1\n8        999\n9        3\n10        1\n11        2\n12        222\n13        2\n14        222\n15        2\n16        222\n17        123456\n\n#\n\n  ListNode     Item   \n----------------------\n1        4\n2        999\n3        3\n4        12345\n5        1\n6        999\n7        3\n8        1\n9        999\n10        3\n11        1\n12        2\n13        222\n14        2\n15        222\n16        2\n17        222\n18        44\n19        123456\n\n#\n\n  ListNode     Item   \n----------------------\n1        123456\n"
+        }
+      ]
+    },
+     {
+      "main_file": "./test_04.cpp",
+      "total": 30,
+      "sets": [
+        {
+          "input": "",
+          "output": "\n  ListNode     Item   \n----------------------\n1        1\n2        2\n3        3\n4        4\n5        5\n\n#\n\n  ListNode     Item   \n----------------------\n1        1\n2        5\n"
+        }
+      ]
+    },
+    {
+      "main_file": "./test_05.cpp",
+      "total": 30,
+      "sets": [
+        {
+          "input": "",
+          "output": "\n  ListNode     Item   \n----------------------\n1        e\n2        w\n3        q\n4        r\n5        t\n\n#\n\n  ListNode     Item   \n----------------------\n1        e\n2        w\n3        y\n4        q\n5        r\n6        t\n7        u\n\n#\n\n  ListNode     Item   \n----------------------\n1        a\n2        e\n3        w\n4        y\n5        q\n6        r\n7        t\n8        y\n9        u\n\n#\n\n  ListNode     Item   \n----------------------\n1        y\n2        q\n"
+        }
+      ]
+    },
+    {
+      "main_file": "./test_06.cpp",
+      "total": 30,
+      "sets": [
+        {
+          "input": "",
+          "output": "\n  ListNode     Item   \n----------------------\n1        e\n2        a\n3        e\n4        c\n5        a\n6        e\n7        c\n8        a\n9        e\n10        c\n11        a\n12        b\n13        d\n14        c\n15        d\n16        b\n17        d\n18        b\n19        d\n20        b\n\n#\n\n  ListNode     Item   \n----------------------\n1        e\n2        b\n"
+        }
+      ]
+    },
+    {
+      "main_file": "./test_07.cpp",
+      "total": 30,
+      "sets": [
+        {
+          "input": "",
+          "output": "\n  ListNode     Item   \n----------------------\n1        9.1235e+06\n2        3\n3        1.90341\n4        999.285\n5        3.13222e+06\n6        1.221\n7        2.83903\n8        2.22213e+06\n9        22143\n10        25422\n\n#\n\n  ListNode     Item   \n----------------------\n1        9.1235e+06\n2        3\n3        123545\n4        1.25434e+06\n5        1.22143e+07\n6        1.90341\n7        999.285\n8        3.13222e+06\n9        1.221\n10        2.83903\n11        2.22213e+06\n12        22143\n13        25422\n14        1.21323e+08\n15        1.22135e+07\n16        1.23785e+07\n\n#\n\n  ListNode     Item   \n----------------------\n1        24.314\n2        4.234\n3        9.1235e+06\n4        3\n5        123545\n6        1.25434e+06\n7        1.22143e+07\n8        1.90341\n9        999.285\n10        3.13222e+06\n11        1.221\n12        2.83903\n13        2.22213e+06\n14        22143\n15        25422\n16        1.21323e+08\n17        1.22135e+07\n18        41.2434\n19        4.4\n20        1.23785e+07\n\n#\n\n  ListNode     Item   \n----------------------\n1        1.22143e+07\n2        1.90341\n3        999.285\n4        3.13222e+06\n5        1.221\n6        2.83903\n"
+        }
+      ]
+    },
+    {
+      "main_file": "./test_08.cpp",
+      "total": 30,
+      "sets": [
+        {
+          "input": "",
+          "output": "\n  ListNode     Item   \n----------------------\n1        12345\n2        13212\n3        23451\n4        5.5345\n5        234.52\n6        2534.52\n7        2534.4\n8        2.23455\n9        4.2345\n10        35.3\n\n#\n\n  ListNode     Item   \n----------------------\n1        12345\n2        35.3\n"
+        }
+      ]
+    },
+    {
+      "main_file": "./test_09.cpp",
+      "total": 30,
+      "sets": [
+        {
+          "input": "",
+          "output": "\n  ListNode     Item   \n----------------------\n1        Bus\n2        King\n3        Queen\n4        Wendy\n5        Amy\n\n#\n\n  ListNode     Item   \n----------------------\n1        Bus\n2        King\n3        Jerry\n4        Queen\n5        Wendy\n6        Amy\n7        Jeff\n\n#\n\n  ListNode     Item   \n----------------------\n1        Eric\n2        Bus\n3        King\n4        Jerry\n5        Queen\n6        Wendy\n7        Amy\n8        Lion\n9        Jeff\n\n#\n\n  ListNode     Item   \n----------------------\n1        Jerry\n2        Queen\n"
+        }
+      ]
+    },
+    {
+      "main_file": "./test_10.cpp",
+      "total": 30,
+      "sets": [
+        {
+          "input": "",
+          "output": "\n  ListNode     Item   \n----------------------\n1        Tony\n2        Apple\n3        Candy\n4        Adam\n5        Cindy\n\n#\n\n  ListNode     Item   \n----------------------\n1        Tony\n2        Cindy\n"
+        }
+      ]
+    }
+  ]
+}

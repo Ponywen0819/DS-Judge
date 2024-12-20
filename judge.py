@@ -90,6 +90,7 @@ class AutoGrader:
 
         source = self.unzip_dir / Path(student_id)
         for file_name in self.judge_files:
+
             source_file = source / file_name
             destination = self.temp_dir / file_name
             if source_file.exists():
@@ -105,8 +106,6 @@ class AutoGrader:
         :return: 批改結果
         """
         res = {}
-        self._remove_judge_files()
-        self.copy_submission(student_id)
 
         for test_group in self.test_group:
 
@@ -150,16 +149,25 @@ class AutoGrader:
         self._remove_judge_files()
         return res
 
-    def exc_single_judge(self, target_dir: Path):
-        student_id = target_dir.stem[:9]
+    def unzip_all_submissions(self):
+        """
+        解壓縮所有學生提交的壓縮擋
+        """
+        submission_list = self._get_zip_files()
+        for submission_file in submission_list:
+            self._unzip_submission(submission_file)
 
-        self._unzip_submission(target_dir)
+    def exc_single_judge(self, target_dir: Path):
+        self._remove_judge_files()
+        student_id = target_dir.stem[:9]
+        self.copy_submission(student_id)
         single_res = self.judge_submission(student_id)
         final_score = 0
         for test_name in single_res.keys():
             final_score += single_res[test_name].scaled_score
 
         self.dump_judge_results(single_res, self.results_dir / f'{student_id}.json')
+        print(final_score)
         return final_score
 
     def exc_judge(self, verbose: bool = False):
@@ -176,6 +184,7 @@ class AutoGrader:
         finally:
             if not verbose:
                 self._clean_up()
+            print("Finished")
 
     def _unzip_submission(self, submission_zip: Path):
         """

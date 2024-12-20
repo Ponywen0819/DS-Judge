@@ -6,3 +6,11 @@
 .vscode/
 
 zip/
+
+unzip/
+
+results/
+
+Test/CA*/result/
+
+Test/CA*/temp/
